@@ -1,0 +1,185 @@
+<div style="width: 100%; padding: 0; margin: 0; text-align: center;">
+    <div style="width: 100%; max-width: 800px; margin: 0 auto;">
+        <div style="padding-top: 0px; padding-bottom: 0px; margin: 0; width: 100%; text-align: center;">
+            <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;" alt="COMPANY" src="{{ header_image_url }}" width="99%">
+        </div>
+        <div style="padding-top: 35px; padding-bottom: 15px; text-align: center;">
+            <p style="font-size: 18px;">Pro <span style="color: #228b22;"><b>nastavení</b></span> speciální ceny stačí poslat mail na <a style="color: #c11156; text-decoration: none;" href="mailto:obchod@company.cz">obchod@company.cz</a></p>
+        </div>
+        {% for product in products %}
+        <div style="padding: 15px; padding-top: 45px; vertical-align: middle; text-align: center;">
+            <div style="width: 100%; margin-top: 20px; display: inline-block; vertical-align: top;">
+                <div style="width: 250px; padding-right: 30px; vertical-align: middle; display: inline-block; text-align: left;">
+                    <a style="text-decoration: none;" href="{{ product.tracked_url }}" target="_blank">
+                        <img style="width: 100%; margin-right: 20px; display: block; border: 0;" alt="{{ product.product_name }}" src="{{ product.product_image }}">
+                    </a>
+                </div>
+                <div style="width: 350px; vertical-align: middle; display: inline-block; text-align: left;">
+                    <p style="font-size: 18px; font-weight: bold; color: #333; text-decoration: none; margin: 0; word-break: break-word; font-family: arial;">{{ product.product_name }}</p>
+                    <p style="font-size: 14px; color: #000; font-family: arial;">PN: {{ product.product_pn }}</p>
+                    <p style="font-size: 16px; color: #000; font-family: arial;">{{ product.marketing_text }}</p>
+                    <div style="width: 100%; margin-top: 20px; display: inline-block; vertical-align: top;">
+                        <div style="display: inline-block; vertical-align: middle; text-align: left;">
+                            <p style="font-size: 14px; color: #c11156; font-family: arial;">
+                                <span style="font-size: 14px; text-decoration: line-through; color: #999; margin-right: 10px;">{{ product.price_without_vat }} Kč</span>
+                                <span style="font-size: 14px; color: #999; margin-right: 10px;"> bez DPH</span><br>
+                                <span style="font-size: 25px; color: #c11156;"><b>{{ product.input_price }} Kč</b></span>
+                                <span style="font-size: 13px; color: #c11156;"> bez DPH</span>
+                            </p>
+                        </div>
+                        <div style="float: right; width: 50%; text-align: right; padding-top: 10px;">
+                            <a style="text-decoration: none; display: inline-block;" href="{{ product.tracked_url }}" target="_blank">
+                                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; margin-left: auto;" title="Detail" alt="Detail" src="https://www.company.cz/file/1392" width="105">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+        <div style="margin: 0; width: 100%; padding-bottom: 25px; padding-top: 80px; vertical-align: top; text-align: center;">
+            <a style="text-decoration: none;" href="../../?utm_source=newsletter&amp;utm_medium=web&amp;utm_campaign=ns250804" target="_blank">
+                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto;" alt="COMPANY" src="https://www.company.cz/file/991" width="30%">
+            </a>
+            <p style="font-family: arial;">
+                <i><span style="color: #c11156; font-size: 21px;">Company je tu pro Vás!</span></i>
+            </p>
+        </div>
+        <div style="width: 100%; overflow: hidden; padding-bottom: 40px; text-align: center;">
+            <div style="width: 24%; float: left; box-sizing: border-box; padding: 0 0.5%; text-align: center;">
+                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; max-width: 200px; margin: 0 auto; padding-bottom: 5px;" title="Hodnota firmy 1" alt="Osobní přístup" src="https://www.company.cz/file/1778" height="auto" width="30%">
+                <p style="min-height: 140px; margin-top: 15px; font-size: 16px;">HODNOTA FIRMY 1<br>
+                    <span style="color: #c11156; font-size: 14px;">
+                        <br>Již 99 let se zajímáme o potřeby zákazníka
+                    </span>
+                </p>
+            </div>
+            <div style="width: 24%; float: left; box-sizing: border-box; padding: 0 0.5%; text-align: center;">
+                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; max-width: 200px; margin: 0 auto; padding-bottom: 5px;" title="Hodnota firmy 2" alt="Osobní přístup" src="https://www.company.cz/file/1779" height="auto" width="30%">
+                <p style="min-height: 140px; margin-top: 15px; font-size: 16px;">HODNOTA FIRMY 2<br>
+                    <span style="color: #c11156; font-size: 14px;">
+                        <br>Reagujeme na Vaše požadavky ihned
+                    </span>
+                </p>
+            </div>
+            <div style="width: 24%; float: left; box-sizing: border-box; padding: 0 0.5%; text-align: center;">
+                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; max-width: 200px; margin: 0 auto; padding-bottom: 5px;" title="Hodnota firmy 3" alt="Osobní přístup" src="https://www.company.cz/file/1780" height="auto" width="30%">
+                <p style="min-height: 140px; margin-top: 15px; font-size: 16px;">HODNOTA FIRMY 3<br>
+                    <span style="color: #c11156; font-size: 14px;">
+                        <br>999K+ IT produktů od 1000+ výrobců
+                    </span>
+                </p>
+            </div>
+            <div style="width: 24%; float: left; box-sizing: border-box; padding: 0 0.5%; text-align: center;">
+                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; height: auto; max-width: 200px; margin: 0 auto; padding-bottom: 5px;" title="Hodnota firmy 4" alt="Osobní přístup" src="https://www.company.cz/file/1781" height="auto" width="30%">
+                <p style="min-height: 140px; margin-top: 15px; font-size: 16px;">HODNOTA FIRMY 4<br>
+                    <span style="color: #c11156; font-size: 14px;">
+                        <br>Rádi Vám najdeme vhodnou alternativu
+                    </span>
+                </p>
+            </div>
+        </div>
+        <div style="padding: 0; margin: 0; padding-top: 15; padding-bottom: 5; width: 100%; vertical-align: top; text-align: center;">
+            <div style="margin-top: 0px; width: 100%; display: inline-block;">
+                <div style="padding: 0; margin: 0; padding-top: 10px; width: 90%; vertical-align: top; text-align: center; display: inline-block;">
+                    <div style="margin-top: 0px; width: 100%; display: inline-block;">
+                        <div style="margin: 0; width: 40%; vertical-align: middle; display: inline-block; text-align: center;">
+                            <a style="text-decoration: none;" href="https://youtu.be/xxx" target="_blank">
+                                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto;" alt="Odkaz 1" src="https://www.company.cz/file/1098" width="70%">
+                            </a>
+                        </div>
+                        <div style="margin: 0; width: 59%; vertical-align: middle; display: inline-block; text-align: left;">
+                            <p style="font-size: 120%; font-family: arial;">
+                                <span style="color: #c11156;">Majitel COMPANY: „Jak v COMPANY získáváme nové zákazníky?“</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 0; margin: 0; padding-top: 10px; width: 90%; vertical-align: top; text-align: center; display: inline-block;">
+                    <div style="margin-top: 0px; width: 100%; display: inline-block;">
+                        <div style="margin: 0; width: 40%; vertical-align: middle; display: inline-block; text-align: center;">
+                            <a style="text-decoration: none;" href="https://www.company.cz/konference?utm_source=newsletter&amp;utm_medium=web&amp;utm_content=konference-article&amp;utm_campaign=ns250804" target="_blank">
+                                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto;" alt="Odkaz 1" src="https://www.company.cz/file/2191" width="70%">
+                            </a>
+                        </div>
+                        <div style="margin: 0; width: 59%; vertical-align: middle; display: inline-block; text-align: left;">
+                            <p style="font-size: 120%; font-family: arial;">
+                                <span style="color: #c11156;">COMPANY Konference</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 0; margin: 0; padding-top: 10px; width: 90%; vertical-align: top; text-align: center; display: inline-block;">
+                    <div style="margin-top: 0px; width: 100%; display: inline-block;">
+                        <div style="margin: 0; width: 40%; vertical-align: middle; display: inline-block; text-align: center;">
+                            <a style="text-decoration: none;" href="https://youtu.be/xxx" target="_blank">
+                                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto;" alt="Odkaz 2" src="https://www.company.cz/file/1097" width="70%">
+                            </a>
+                        </div>
+                        <div style="margin: 0; width: 59%; vertical-align: middle; display: inline-block; text-align: left;">
+                            <p style="font-size: 120%; font-family: arial;">
+                                <span style="color: #c11156;">Naše video - COMPANY a COMPANY</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 0; margin: 0; padding-top: 10px; width: 90%; vertical-align: top; text-align: center; display: inline-block;">
+                    <div style="margin-top: 0px; width: 100%; display: inline-block;">
+                        <div style="margin: 0; width: 40%; vertical-align: middle; display: inline-block; text-align: center;">
+                            <a style="text-decoration: none;" href="https://www.youtube.com/watch?v=xxx" target="_blank">
+                                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; margin: 0 auto;" alt="Odkaz 2" src="https://www.company.cz/file/1741" width="70%">
+                            </a>
+                        </div>
+                        <div style="margin: 0; width: 59%; vertical-align: middle; display: inline-block; text-align: left;">
+                            <p style="font-size: 120%; font-family: arial;">
+                                <span style="color: #c11156;">COMPANY - COMPANY - Jak společně dodáváme IT</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div style="padding: 0; margin: 0; padding-top: 5; width: 90%; vertical-align: top; text-align: center; display: inline-block;">
+            <div style="clear: both; width: 100%; margin: 0 auto; background-color: #ffffff; margin-top: 20px; display: inline-block;">
+                <div style="padding: 0; margin: 0; padding-top: 15; vertical-align: top; text-align: center;">
+                    <p style="font-size: 25px; color: #c11156; font-family: arial;">Kontakt</p>
+                    <p style="font-size: 16px; font-family: arial;">Pro nastavení speciální ceny stačí poslat mail na <a style="text-decoration: none;" href="mailto:obchod@company.cz"><span style="color: #c11156;">obchod@company.cz</span></a><br>nebo zavolat 730 123 456 a my už se o Vás postaráme.<br>
+                        <span style="text-decoration: none;">Nepište na news@company.cz, děkujeme.</span>
+                    </p>
+                    <p style="font-size: 16px; font-family: arial;">
+                        <a style="text-decoration: none;" href="../../?utm_source=newsletter&amp;utm_medium=web&amp;utm_campaign=ns250804" target="_blank">
+                            <span style="color: #c11156;">www.company.cz</span>
+                        </a>
+                    </p>
+                    <p style="font-size: 16px; font-family: arial;">COMPANY s.r.o.<br>Falešná 123/4 - 101 00 - Praha 1<br>IČ: 12345678 | DIČ: CZ12345678</p>
+                </div>
+                <div style="padding: 0; margin: 0; width: 40%; vertical-align: top; text-align: center; display: inline-block;">
+                    <div style="width: 100%; margin-top: 20px; display: inline-block;">
+                        <div style="padding: 5; margin: 0; vertical-align: top; display: inline-block; text-align: right;">
+                            <a style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #ffffff; font-size: 14px;" href="https://www.facebook.com/company" target="_blank">
+                                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;" alt="facebook" src="https://lh3.googleusercontent.com/MXhhD8G9ktTm2h_s24urYe1M400hu8JX9tnB3d96YSIs1Rta9rpzzpCGsv0_MME1zj62zyVt7eowNhnbFIDc2zxQq9pD9j_ppS5eAGGTd35Q_MgUST1Snvfh6wC15pKyRYTpFkM_hg=w2400" width="40">
+                            </a>
+                        </div>
+                        <div style="padding: 5; margin: 0; width: 15%; vertical-align: top; display: inline-block; text-align: center;">
+                            <a style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #ffffff; font-size: 14px;" href="https://www.youtube.com/@company" target="_blank">
+                                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;" alt="youtube" src="https://lh3.googleusercontent.com/wNejNNEkFNv4pYIwQ3_k2C1ak2A4C2BoeTTi3XlUx5bbvYakCeV64N1FFMf2wQrOPlYguacYPSSajLymp4ap7P-nGNHM8SjaS7I3PgPeeFSsnTkbW5pcWxypqymdldN9WjnE8ISVog=w2400" width="40">
+                            </a>
+                        </div>
+                        <div style="padding: 5; margin: 0; vertical-align: top; display: inline-block; text-align: left;">
+                            <a style="-webkit-text-size-adjust: none; -ms-text-size-adjust: none; mso-line-height-rule: exactly; text-decoration: underline; color: #ffffff; font-size: 14px;" href="https://www.tiktok.com/@company" target="_blank">
+                                <img style="display: block; border: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicubic;" alt="tiktok" src="https://lh3.googleusercontent.com/PuGHskvkjOl_JeqoIta66gb5qXLcBV7p7aHrjkgeARLI73VTfJU7a1-rzl5HPOCvL2_jgxDHtzgNcOwj1oh2QCD4lUv2FVJ5pUq4Zs3ga1UC1XACRv16wiC7_V_d7SlbDJFL-78V1A=w2400" width="40">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding: 0; margin: 0; vertical-align: top; text-align: center;">
+                    <div style="width: 100%; margin-top: 20px; display: inline-block;">
+                        <div style="text-align: center; padding: 0; margin: 0; vertical-align: middle;">
+                            <p style="font-size: 12px; font-family: arial;">Nabídka platná do odvolání nebo vyprodání zásob.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

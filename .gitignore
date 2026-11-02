@@ -1,0 +1,52 @@
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+config.json
+secrets/
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Local Python environments and caches
+.venv/
+venv/
+env/
+ENV/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+coverage.xml
+htmlcov/
+
+# Generated application data
+output/
+*.log
+
+# Build and packaging output
+build/
+dist/
+site/
+*.egg-info/
+
+# Local editor and operating system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Temporary files and notebook checkpoints
+*.tmp
+*.temp
+*.swp
+*.swo
+.ipynb_checkpoints/

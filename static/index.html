@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Newsletter Generator</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header>
+      <p class="eyebrow">COMPANY / CONTENT OPERATIONS</p>
+      <h1>Product Newsletter<br><em>Generator.</em></h1>
+      <p class="intro">Vložte seznam produktů a cen. Aplikace stáhne data z e-shopu, vygeneruje e-mail a vrátí připravený HTML soubor.</p>
+    </header>
+
+    <form id="job-form">
+      <label for="raw-data">Produkty <span>jeden na řádek: kód - cena</span></label>
+      <textarea id="raw-data" required placeholder="26929842 - 42 599 Kč&#10;26930988 - 3 199 Kč"></textarea>
+      <p></p>
+      <label for="header-image-url">URL obrázku záhlaví <span>volitelně</span></label>
+      <input id="header-image-url" type="url" placeholder="https://example.com/newsletter-header.jpg">
+      <div class="form-row">
+        <!--
+        <div>
+          <label for="email-to">Odeslat kopii <span>volitelně</span></label>
+          <input id="email-to" type="email" placeholder="marketing@firma.cz" disabled>
+        </div>
+        <div>
+          <label for="api-key">Access key <span>if enabled</span></label>
+          <input id="api-key" type="password" placeholder="APP_API_KEY">
+        </div>
+        -->
+        <button type="submit"><span>Generovat newsletter</span><strong>↗</strong></button>
+      </div>
+    </form>
+
+    <section id="status" class="status" hidden>
+      <div class="status-line"><span class="dot"></span><span id="status-text">Čekání na aplikaci…</span></div>
+      <div id="result" hidden>
+        <p id="email-status"></p>
+        <a id="preview" target="_blank">Otevřít náhled <span>↗</span></a>
+        <a id="download" target="_blank">Stáhnout HTML <span>↓</span></a>
+      </div>
+    </section>
+    <p id="error" class="error" hidden></p>
+  </main>
+  <script src="/static/app.js?v=4"></script>
+</body>
+</html>
